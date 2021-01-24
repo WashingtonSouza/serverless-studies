@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk')
 const uuid = require('uuid')
 
-const dynamoDB = new AWS.dynamoDB.DocumentClient()
+const dynamoDB = new AWS.DynamoDB.DocumentClient()
 
 class Handler {
   constructor({ dynamoDbSvc }) {
@@ -14,6 +14,7 @@ class Handler {
   }
 
   prepareData(data) {
+    console.log('====> ', data)
     const params = {
       TableName: this.dynamodbTable,
       Item: {
