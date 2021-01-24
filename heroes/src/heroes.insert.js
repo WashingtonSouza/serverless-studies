@@ -14,7 +14,6 @@ class Handler {
   }
 
   prepareData(data) {
-    console.log('====> ', data)
     const params = {
       TableName: this.dynamodbTable,
       Item: {
