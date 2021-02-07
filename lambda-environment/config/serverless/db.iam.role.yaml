@@ -2,4 +2,4 @@
   Action:
     - dynamodb:GetItem
     - dynamodb:PutItem
-  Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName"
+  Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName}"

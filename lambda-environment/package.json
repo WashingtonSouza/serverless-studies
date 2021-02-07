@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/WashingtonSouza/serverless-studies/issues"
   },
-  "homepage": "https://github.com/WashingtonSouza/serverless-studies#readme"
+  "homepage": "https://github.com/WashingtonSouza/serverless-studies#readme",
+  "dependencies": {
+    "aws-sdk": "^2.839.0",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "env-var": "^7.0.0"
+  }
 }

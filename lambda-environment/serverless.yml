@@ -10,11 +10,11 @@ provider:
     ${file(./config/serverless/db.iam.role.yaml)}
 
 custom:
-  scheduleRate: rate(1 minute)
+  schedulerRate: rate(1 minute)
   enabled: true
   tableName: ${self:provider.environment.DbTableName}
   dbWriteCapacityUnits: ${self:provider.environment.DbWriteCapacityUnits}
-  dbReadCapacityUnits: ${self:provider.environment.DbReadCapacityUnits}
+  dbReadCapacityUnits: ${self:provider.environment.DbReadCapacityUnits} 
 
 resources:
   Resources:
@@ -25,7 +25,7 @@ functions:
     handler: handler.scheduler
     events:
       - schedule:
-        rate: ${self:custom.scheduleRate}
-        name: schedule-commit-message-${self:provider.stage}
-        description: get commit messages each minute
-        enabled: ${self:custom.enabled}
+          rate: ${self:custom.schedulerRate}
+          name: schedule-commit-message-${self:provider.stage}
+          description: get commit messages each minute
+          enabled: ${self:custom.enabled}
